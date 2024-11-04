@@ -15,13 +15,13 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 header{
-    z-index: 10;
+    /* z-index: 10; */
     padding: 0.4rem;
     position: sticky; 
     top: 0;
     left: 0;
-    height: 40px;
-    width: 100vw;
+    height: 50px;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
@@ -75,18 +75,18 @@ del{
     /* position : absolute;
     top: 49px; */
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     /* margin-top: 50px; */
     /* margin-bottom: 50px; */
-    align-content: center;
+    /* align-content: center; */
     gap: 0;
     padding: 0;
 }
 .card{
     background-color: white;
-    width: 49.4%;
+    width: 50%;
     cursor: pointer;
     /* border: 1px solid gray; */
     /* border-right: 0.5px solid gray; */
@@ -96,9 +96,7 @@ del{
 .prod-img{
     width: 100%;
 }
-.card{
-    margin: 1px;
-}
+
 .prod-name{
     display: flex;
     flex-direction: row;
@@ -107,7 +105,7 @@ del{
     /* padding: 8px 0 0 0; */
 }
 .prod-name h3{
-    padding-left: 8px;
+    padding-left: 0.42rem;
     /* padding-left: 0.35rem; */
     font-weight: 700;
     font-size: 13px;
@@ -134,15 +132,9 @@ del{
     font-weight: 400;
     text-align: left;
     height: 12px;
-    max-width: 180px;
+    /* max-width: 180px; */
     color: #282C3F;
     opacity: 0.6;
-}
-.main-section{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    flex-wrap: wrap;
 }
 
 #footer-items{
@@ -185,7 +177,7 @@ del{
     top: 0;
     left: 0;
     z-index: 13;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
 }
