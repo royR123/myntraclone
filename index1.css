@@ -228,7 +228,7 @@ del{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #eaeaec;
 }
 #filter-header button{
     border: none;
