@@ -16,6 +16,41 @@
     }
 
 }
+.ratings{
+    position: absolute;
+    bottom: 18px;
+    left: 0.7rem;
+    display: inline flex;
+    background-color: rgb(255, 255, 255);
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    padding-left: 6% ;
+    padding-right: 6%;
+    border-radius: 32%;
+    height: 21px;
+    width: 75px;
+    font-size: 10px;
+    font-weight: 700;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.icon-star{
+    width: 7px;
+}
+.rating-divider{
+    width: 1px;
+    margin-left:0.1rem;
+    /* border: 5px solid black; */
+    background-color: #3e41526c;
+    height: 100%;
+
+}
+.excellent {
+    background-image: url(https://constant.myntassets.com/pwa/assets/img/2bce8a2b-e1d5-465a-8980-62f3d778377c1548353615799-Fill-90-Copy-7.png);
+    height: 10px; /* or any appropriate value */
+    width: 10px; /* or any appropriate value */
+}
 body{
     display: flex;
     flex-direction: column;
@@ -27,7 +62,7 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 header{
-    /* z-index: 10; */
+    z-index: 10;
     padding: 0.4rem;
     position: sticky; 
     top: 0;
@@ -95,8 +130,6 @@ del{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 10px;
-    margin-left: 30px;
 }
 .main-section{
     display: flex;
@@ -106,6 +139,7 @@ del{
     gap: 0;
 }
 .card{
+    
     background-color: white;
     width: 50%;
     cursor: pointer;
@@ -115,6 +149,11 @@ del{
     border-right: 1px solid rgba(187, 186, 186, 0.456);
 }
 .prod-img{
+    position: relative;
+    width: 100%;
+}
+.prod-img img{
+    /* object-fit: cover; */
     width: 100%;
 }
 
@@ -324,7 +363,8 @@ del{
     border-bottom: .5px solid #eaeaec;;
 }
 .right-filter-part ul{
-    overflow-y: scroll;
+    overflow: auto;
+
 }
 .right-filter-part ul li span{
     font-size: 10px;
