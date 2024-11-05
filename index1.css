@@ -66,7 +66,7 @@ header{
     text-overflow: ellipsis; */
 }
 del{
-    color: #8b8b8d;
+    color: #bebebf;
 }
 .ruppeeSVG{
     width: 1px;
@@ -97,7 +97,6 @@ del{
     justify-content: flex-end;
     gap: 10px;
     margin-left: 30px;
-    /* padding-left: 20px; */
 }
 .main-section{
     display: flex;
@@ -110,9 +109,10 @@ del{
     background-color: white;
     width: 50%;
     cursor: pointer;
-    /* border: 0.1px solid gray; */
-    border-right: 0.5px solid rgb(253, 253, 253);
 
+}
+.card:nth-child(odd){
+    border-right: 1px solid rgba(187, 186, 186, 0.456);
 }
 .prod-img{
     width: 100%;
@@ -122,12 +122,14 @@ del{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
     /* padding: 8px 0 0 0; */
 }
 .prod-name h3{
     padding-left: 0.42rem;
-    padding-bottom: 0.1rem;
+    /* padding-bottom: 0.1rem; */
     padding-left: 0.35rem;
     font-weight: 700;
     font-size: 13px;
@@ -136,7 +138,9 @@ del{
     color: #282C3F;
     font-family:"Assistant" , serif;
     width: 85%;
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .price{
     padding-left: 0.35rem;
@@ -156,7 +160,11 @@ del{
     height: 12px;
     /* max-width: 180px; */
     color: #282C3F;
+    text-overflow: ellipsis;
     opacity: 0.6;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #footer-items{
@@ -169,15 +177,16 @@ del{
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    justify-content: space-between;
+    background-color: white;
 }
 .footer-btn-items{
 
     background-color: white;
     border: none;
-    width: 50%;
+    width: 49.5%;
     font-size: 13px;
-    border-left: 0.3px solid rgba(128, 128, 128, 0.567);
+    /* border-left: 0.3px solid rgba(128, 128, 128, 0.567); */
     display: flex;
     font-weight: 700;
     gap: 0.5rem;
@@ -189,6 +198,12 @@ del{
     color: #424553;
     line-height: 1.42857143;
     font-family: "Assistant", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+#footer-divider{
+    width: 0.01rem;
+    height: 22px;
+    background-color: #a7a7a750;
 }
 
 #filter-cont{
@@ -203,17 +218,12 @@ del{
     width: 100vw;
 
 }
-#part2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-#part2 label{
-    padding: 10px;
-}
+
 .searchBar{
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
     background-color: #F4F4F5;
     display: flex;
     flex-direction: row;
@@ -229,12 +239,7 @@ del{
     background-color: #f4f4f5;
     font-size: 12px;
 }
-#part3{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95vw;
-}
+
 #filter-header{
     /* position: fixed;
     left: 0;
@@ -275,26 +280,77 @@ del{
     overflow-y: auto;
     width: 60%;
 }
-#part3 .filters button{
-    border: none;
-    color: #3E4152;
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #eaeaec;
-}
-#part3 .categories .items{
-    padding: 0 20px;
-    color: #3E4152;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 15px 2px 15px 0;
-    border-bottom: 0.1px solid #eaeaec;
 
-}
+
 .filterContClass{
     visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.filter-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.left-filter-part{
+    /* background-color: #FF3E6C; */
+    width: 35%;
+    overflow-y: scroll;
+}
+.left-filter-part ul li{
+    color: #3E4152;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color:#F5F5F6;
+    border-bottom: 0.002rem solid #59595c15;
+}
+.right-filter-part{
+    width: 65%;
+    /* background-color: green; */
+}
+.right-filter-part ul li{
+    display: flex;
+    flex-direction: row;
+    /* overflow: scroll; */
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    padding: 15px 2px 15px 0px;
+    font-size: 14px;
+    border-bottom: .5px solid #eaeaec;;
+}
+.right-filter-part ul{
+    overflow-y: scroll;
+}
+.right-filter-part ul li span{
+    font-size: 10px;
+    font-family: "Assistant" , Arial, Helvetica, sans-serif;
+    color: #94969F;
+}
+.searchBar ::placeholder{
+    color: #94969F;
+    font-size: 13px;
+    padding-left: 0px;
+
+}
+.filterValue{
+    padding-left: 12px;
+}
+.checkboxIndicator:after{
+    content: "R";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 5px;
+    border-color: #bfc0c6;
+    border-style: none none solid solid;
+    border-width: 1px;
+    transform: rotate(-45deg); 
 }
 #part4{
     width: 100%;
