@@ -14,6 +14,14 @@
         visibility: hidden;
         position: fixed;
     }
+    #desktop-header{
+        position: fixed;
+        visibility: hidden;
+    }
+     picture{
+        visibility: hidden;
+        position: fixed;
+     }
 
 }
 .ratings{
@@ -504,18 +512,46 @@ del{
 }
 
 @media screen and (min-width : 550px) {
+    .circle{
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 50%;
+    }
+    .yellow{
+        background-color:yellow;
+    }
+    .red{
+        background-color: red;
+    }
+    .green{
+        background-color: green;
+    }
+    .pink{
+        background-color: pink;
+    }
+    .blue{
+        background-color: blue;
+    }
     #footer-items{
         visibility: hidden;
     }
     #desktop-nav{
         visibility: visible;
     }
+    .desktop-brand-categories{
+
+    }
     .desktop-brand-categories input{
         width: 16px;
         height: 16px;
         margin-right: 12px;
+        margin-left: 20px;
     }
     .desktop-brand-categories label{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 13px;
     }
     .desktop-brand-categories div{
@@ -531,11 +567,14 @@ del{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        /* margin-top: 12px; */
+        margin-left: 20px;
+
     }
     #desktop-cont{
         /* padding: 1rem; */
         display: flex;
-        width: 100vw;
+        width: 100%;
         flex-direction: row;
         justify-content: space-around;
         height: 90vh;
@@ -546,7 +585,7 @@ del{
         padding: 0.6rem;
     }
     .main-section{
-        width: 117%;
+        width: 100%;
         background-color: #3E4152;
         display: flex;
         flex-direction: row;
@@ -570,35 +609,83 @@ del{
         box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     header{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        
-        height: 80px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, .05);
-    }
-    #header-categories{
-        width: 50%;
-        /* gap: 12px; */
-        visibility: visible;
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: space-between;
-        /* gap: 12px; */
-    }
-    #header-categories li{
-        font-size: 14px;
-        font-weight: 700;
-        cursor: pointer;
+        position: fixed;
+        visibility: hidden;
     }
     #back-symbol{
         position: fixed;
         visibility: hidden;
     }
+    #desktop-header{
+        visibility: visible;
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        /* padding: 22px; */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.099);
+    }
+    #desktop-upper-nav{
+        padding-left: 22px;
+        padding-top : 20px;
+        font-size: 14px;
+        word-wrap: 22px;
+    }
+    #desktop-lower-nav{
+        padding-left: 22px;
+        padding-top: 6px;
+        padding-bottom: 20px;
+    }
+    .aside-heading{
+        margin: 0 0 14px;
+    }
+    .inp{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #F5F5F6;
+        /* padding: 12px; */
+        border-radius: 2px;
+    }
+    .inp input{
+        border: none;
+        background-color: #F5F5F6;
+    }
+    /* #desktop-header pic */
+    #desktop-header picture img{
+        width: 65px;
+        height: 40px;
+        margin-right: 12px;
+        margin-left: 12px;
+
+    }
+    #desktop-header ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1.8rem;
+    }
+    #desktop-header ul li{
+        list-style: none;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+        font-family: "Assistant", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    #desktop-header ul li sup{
+        color: #FF3F63;
+        font-size: 10px;
+    }
     #myntra-symbol{
-        width: 75px;
-        height: auto;
+        /* width: 75px;
+        height: auto; */
     }
     #main-header-icon h3{
         position: fixed;
@@ -606,7 +693,15 @@ del{
     }
     #header-icons{
         position: fixed;
+        top: 0;
         visibility: hidden;
     }
 
+}
+
+@media screen and (max-width : 670px) {
+    .inp{
+        position: fixed;
+        visibility: hidden;
+    }
 }
