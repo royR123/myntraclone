@@ -331,6 +331,7 @@ del{
     display: flex;
     flex-direction: row;
     height: 100%;
+    justify-content: space-between;
 }
 .left-filter-part{
     /* background-color: #FF3E6C; */
@@ -349,6 +350,7 @@ del{
 }
 .right-filter-part{
     width: 65%;
+    /* overflow-y: scroll; */
     /* background-color: green; */
 }
 .right-filter-part ul li{
@@ -363,18 +365,27 @@ del{
     border-bottom: .5px solid #eaeaec;;
 }
 .right-filter-part ul{
-    overflow: auto;
+    width: 89%;
+    height: 100%;
+    /* align-self: flex-end; */
+    margin-left: 0.9rem;
+    overflow-y: auto;
 
 }
 .right-filter-part ul li span{
     font-size: 10px;
     font-family: "Assistant" , Arial, Helvetica, sans-serif;
     color: #94969F;
+    margin-right: 12px;
+}
+.searchBar input{
+    padding: 10px 10px 0 26px;
 }
 .searchBar ::placeholder{
     color: #94969F;
-    font-size: 13px;
+    font-size: 12px;
     padding-left: 0px;
+    /* line-height: 1rem; */
 
 }
 .filterValue{
