@@ -493,10 +493,10 @@ del{
 }
 #emptyarea{
     background-color: rgba(0, 0, 0, .5);
-    height: 65%;
+    height: 55%;
 }
 #area{
-    height: 35%;
+    height: 45%;
     background-color: white;
 }
 #sort-cont li{
