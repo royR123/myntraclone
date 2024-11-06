@@ -145,6 +145,10 @@ del{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0;
+    overflow: scroll;
+}
+.main-section::-webkit-scrollbar{
+    display: none;
 }
 .card{
     
@@ -344,7 +348,10 @@ del{
 .left-filter-part{
     /* background-color: #FF3E6C; */
     width: 35%;
-    overflow-y: scroll;
+    overflow: scroll;
+}
+.left-filter-part::-webkit-scrollbar{
+    display: none;
 }
 .left-filter-part ul li{
     color: #3E4152;
@@ -362,55 +369,69 @@ del{
     /* background-color: green; */
 }
 .right-filter-part ul li{
-    display: flex;
-    flex-direction: row;
-    /* overflow: scroll; */
-    justify-content:space-between;
-    align-items: center;
-    list-style: none;
-    padding: 15px 2px 15px 0px;
-    font-size: 14px;
-    border-bottom: .5px solid #eaeaec;;
+
 }
 .right-filter-part ul{
     width: 89%;
     height: 100%;
     /* align-self: flex-end; */
     margin-left: 0.9rem;
-    overflow-y: auto;
-
+    overflow: scroll;
 }
-.right-filter-part ul li span{
+.right-filter-part ul::-webkit-scrollbar{
+    display: none;
+}
+.right-filter-part ul li label span{
     font-size: 10px;
     font-family: "Assistant" , Arial, Helvetica, sans-serif;
     color: #94969F;
-    margin-right: 12px;
+    margin-left: auto;
+    text-align: right;
+    
 }
 .searchBar input{
     padding: 10px 10px 0 26px;
 }
+.customCheckbox{
+    display: flex;
+    flex-direction: row;
+
+    justify-content:flex-start;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 15px 2px 15px 0px;
+    font-size: 14px;
+    border-bottom: .5px solid #eaeaec;
+}
+.customCheckbox input[type = "checkbox"]{
+    display: none;
+}
+
 .searchBar ::placeholder{
     color: #94969F;
     font-size: 12px;
     padding-left: 0px;
-    /* line-height: 1rem; */
-
 }
 .filterValue{
     padding-left: 12px;
 }
-.checkboxIndicator:after{
-    content: "R";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 5px;
-    border-color: #bfc0c6;
-    border-style: none none solid solid;
-    border-width: 1px;
-    transform: rotate(-45deg); 
+
+.checkboxIndicator::after {
+    content: '✔'; /* Checkmark symbol */
+    transform: translate(-50%, -50%); 
+    font-size: 10px;
+    color: rgb(194, 193, 193); 
 }
+
+.customCheckbox input[type= "checkbox"]:checked + .checkboxIndicator::after{
+    content: '✔'; 
+    /* transform: translate(-50%, -50%); 
+    font-size: 10px; */
+    color: rgb(249, 56, 133); 
+}
+
+
 #part4{
     width: 100%;
     display: flex;
