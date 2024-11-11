@@ -705,6 +705,31 @@ del{
     #search-bar-filter{
         margin: 0;
     }
+    .profile-links{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 42px;
+    }
+    .profiles{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 22px;
+
+    }
+    .profiles a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 12px;
+    }
     .inp{
         margin-left: 5%;
         display: flex;
@@ -713,9 +738,14 @@ del{
         align-items: center;
         background-color: #F5F5F6;
         padding-left: 11px;
-
+        /* background-color: white; */
         border-radius: 2px;
-        width: 30%;
+        width: 50%;
+    }
+    .inp:has(input:focus){
+        outline: none;
+        border: none;
+        background-color: white;
     }
     .inp input{
         border: none;
@@ -723,7 +753,11 @@ del{
         padding: 12px;
         width: 90%;
     }
-    /* #desktop-header pic */
+    .inp input:focus{
+        outline: none;
+        border: none;
+        background-color: white;
+    }
     #desktop-header picture img{
         width: 65px;
         height: 40px;
