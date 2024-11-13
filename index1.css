@@ -752,11 +752,23 @@ del{
         margin: 0;
     }
     .profile-links{
-        width: 60%;
+        width: 50%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-evenly;
         gap: 42px;
+    }
+    .mylinks{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .mylinks ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 22px;
     }
     .profiles{
         display: flex;
@@ -793,7 +805,7 @@ del{
         padding-left: 11px;
         /* background-color: white; */
         border-radius: 2px;
-        width: 50%;
+        width: 57%;
     }
     .inp:has(input:focus){
         outline: none;
