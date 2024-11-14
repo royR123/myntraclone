@@ -544,6 +544,9 @@ del{
 .onhover-card{
     display: none;
 }
+.pagination-container{
+    display: none;
+}
 @media screen and (min-width : 550px) {
     .onhover-card span{
         padding-left: 5px;
