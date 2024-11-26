@@ -6,6 +6,7 @@
 }
 
 @media screen and (max-width : 550px) {
+
     #desktop-filters{
         visibility: hidden;
         position: fixed;
@@ -548,6 +549,56 @@ del{
     display: none;
 }
 @media screen and (min-width : 550px) {
+    .profiles a{
+        /* background-color: gray; */
+    }
+    .icons-pages{
+        /* background-color: gray; */
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sprites-headerBag{
+        width: 22px;
+        height: 22px;
+        background-position: -341px -56px;
+    }
+    .desktop-iconBag{
+        margin: 8px 0 0;
+        position: absolute;
+        bottom: 14px;
+        left: -1px;
+    }
+    .desktop-iconUser {
+        margin: 10px 0 0;
+        position: absolute;
+        bottom: 13px;
+        left: 5px;
+        display: block;
+    }
+    .sprites-headerUser {
+        width: 24px;
+        height: 24px;
+        background-position: -298px -56px;
+    }
+    .desktop-iconWishlist {
+        margin: 8px 0 0;
+        position: absolute;
+        bottom: 14px;
+    }
+    
+    .sprites-headerWishlist {
+        width: 17px;
+        height: 22px;
+        background-position: -315px -187px;
+    }
+    .myntraweb-sprite {
+        background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+        background-size: 1404px 105px;
+        display: inline-block;
+    }
     .onhover-card span{
         padding-left: 5px;
         /* background-color: #282C3F; */
@@ -784,6 +835,10 @@ del{
         transform: rotate(-45deg);
         text-align: center;
      }
+    .desktop-color div input:checked ~.common-checkbox-indicator{
+        visibility: visible;
+        background: #ff3f6c;
+    }
     .desktop-brand-categories div input:checked ~.common-checkbox-indicator{
         visibility: visible;
         background: #ff3f6c;
@@ -957,7 +1012,7 @@ del{
     }
 
     .card:hover{
-        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.071);
+        box-shadow:  0 4px 8px 0 rgba(173, 173, 173, 0.177);
     }
     header{
         position: fixed;
@@ -1003,14 +1058,14 @@ del{
         margin: 0;
     }
     .profile-links{
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         gap: 42px;
     }
     .mylinks{
-        width: 50%;
+        width: 40%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -1038,13 +1093,6 @@ del{
         text-decoration: none;
         font-weight: 700;
         font-size: 12px;
-    }
-    .profiles a svg{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
     }
     .inp{
         margin-left: 5%;
@@ -1076,6 +1124,7 @@ del{
     .upper-main-section-left span{
         cursor: pointer;
         padding : 5px 8px 5px 10px;
+        font-size: 14px;
     }
     .upper-main-section-right{
         cursor: pointer;
@@ -1203,6 +1252,7 @@ del{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
     .pagination-container li{
         
@@ -1212,6 +1262,7 @@ del{
         font-weight: 700;
         cursor: pointer;
         height:42px;
+        color: gray;
         border-radius: 4px;
         border: 1px solid #d4d5d9;
         text-align: center;
@@ -1230,7 +1281,56 @@ del{
         margin-left: 64px;
         padding: 10px 22px;
     }
-
+    .pagination-next:hover{
+        border: 1px solid black;
+    }
+    .pagination-arrowRight{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: solid #282c3f;
+        border-width: 2px 2px 0px 0px;
+        transform: rotate(45deg);
+        margin-left: 6px;
+    }
+    .pagination-arrowLeft{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: solid gray;
+        border-width: 0px 0px 2px 2px;
+        transform: rotate(45deg);
+        margin-right: 6px;
+    }
+    .pagination-arrowLeft-double{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: solid gray;
+        border-width: 0px 0px 2px 2px;
+        transform: rotate(45deg);
+        /* margin-right: 6px; */
+    }
+    #pg-cont-go-to-first-page{
+        font-weight: 500;
+        margin-left: 2px;
+        margin-right: 13px;
+        
+    }
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: 200;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+    }
 }
 
 @media screen and (max-width : 850px) {
@@ -1251,6 +1351,5 @@ del{
         flex-direction: column;
 
     }
-
 
 }
